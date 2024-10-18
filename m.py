@@ -103,7 +103,7 @@ def check_user_approval(user_id):
     return False
 
 def send_not_approved_message(chat_id):
-    bot.send_message(chat_id, "*☢️FIRST BUY ACCESS FROM YOUR FATHER☢️\n@MANAGER_149*", parse_mode='Markdown')
+    bot.send_message(chat_id, "*☢️FIRST BUY ACCESS FROM YOUR FATHER☢️ @MANAGER_149*", parse_mode='Markdown')
 
 
 # Approve or disapprove user
@@ -115,7 +115,7 @@ def approve_or_disapprove_user(message):
     cmd_parts = message.text.split()
 
     if not is_admin:
-        bot.send_message(chat_id, "*☢️FIRST BUY ACCESS FROM YOUR FATHER☢️\n@MANAGER_149*", parse_mode='Markdown')
+        bot.send_message(chat_id, "*☢️FIRST BUY ACCESS FROM YOUR FATHER☢️ @MANAGER_149*", parse_mode='Markdown')
         return
 
     if len(cmd_parts) < 2:
@@ -186,7 +186,7 @@ def process_attack_command(message):
             return
 
         asyncio.run_coroutine_threadsafe(run_attack_command_async(target_ip, target_port, duration), loop)
-        bot.send_message(message.chat.id, f"*Attack started Dear Vip User' 💥\n\nHost: {target_ip}\nPort: {target_port}\nTime: {duration} seconds\nOwner - @Manager_149*", parse_mode='Markdown')
+        bot.send_message(message.chat.id, f"*💥Attack started Dear Vip User' 💥\n\nHost: {target_ip}\nPort: {target_port}\nTime: {duration} seconds\nVip User of - @Manager_149*", parse_mode='Markdown')
     except Exception as e:
         logging.error(f"Error in processing attack command: {e}")
 
@@ -240,9 +240,9 @@ def handle_message(message):
             response = "*No account information found. Please contact the administrator.*"
         bot.reply_to(message, response, parse_mode='Markdown')
     elif message.text == "Help❓":
-        bot.reply_to(message, "*CONTACT 💞 @Manager_149 💞 FOR HELP*", parse_mode='Markdown')
+        bot.reply_to(message, "*CONTACT💞@Manager_149💞 FOR HELP*", parse_mode='Markdown')
     elif message.text == "Contact admin✔️":
-        bot.reply_to(message, "*🔥 @Manager_149 💟*", parse_mode='Markdown')
+        bot.reply_to(message, "*🔥@Manager_149💟*", parse_mode='Markdown')
 
 
 # Start the bot and asyncio thread
